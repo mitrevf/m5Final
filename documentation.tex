@@ -1,0 +1,92 @@
+\documentclass[11pt,a4paper,titlepage,twoside]{scrartcl}
+\usepackage[sfdefault]{FiraSans} % fancy up the font
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+
+\usepackage[titletoc]{appendix}
+\usepackage{geometry}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem} % referencable enumerations
+\usepackage{eurosym}
+
+%\usepackage{biblatex}
+%$\addbibresource{references.bib}
+
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning, shapes, shapes.geometric, arrows, automata}
+\usepackage{adjustbox}
+
+\usepackage{url}
+\usepackage{hyperref}
+
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{color}
+
+%\usepackage{natbib}
+
+\AtBeginDocument{\renewcommand\appendixname{Appendix}}
+
+\begin{document}
+
+\titlehead{Universitat Autònoma de Barcelona\\
+Centre de Visió per Computador, Barcelona
+}
+
+\title{M5. Visual Recognition}
+\subtitle{Final Project Report} 
+\author{
+    Cosmin Bercea\\
+    \href{mailto:cosmin.bercea@fau.de}{cosmin.bercea@fau.de}
+    \and
+    Justyna Gula \\
+    \href{0}{0}
+    \and
+    Filip Mitrev\\
+    \href{1}{1}
+}
+
+\date{\today}
+
+% hacky way of including image is hacky ...
+\publishers{
+    Coordination: Ramon Baldrich
+    {
+    \vspace{4cm}
+    \begin{center}
+    \includegraphics[scale = 0.7]{figures/master_cv.jpg}
+    \end{center}
+    }
+}
+
+% geometry hacking to center the title :(
+\newgeometry{margin=1in}
+\maketitle
+\restoregeometry
+
+
+\input{abstract}
+
+\input{motivation}
+
+\input{bow}
+
+\input{early_fusion}
+
+\input{spm}
+
+\input{vlad}
+
+\input{deep_learning}
+
+\input{conclusion}
+
+\newpage
+
+%\printbibliography
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
